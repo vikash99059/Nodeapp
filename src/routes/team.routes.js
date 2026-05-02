@@ -7,6 +7,7 @@ import {
 } from "../controllers/team.controller.js";
 
 import { upload } from "../middlewares/upload.js";
+import { verifyToken } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
 

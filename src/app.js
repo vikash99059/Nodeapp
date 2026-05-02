@@ -5,6 +5,9 @@ import userRoutes from "./routes/user.routes.js";
 import teamRoutes from "./routes/team.routes.js";
 import blogRoutes from "./routes/blog.routes.js";
 import { swaggerDocs } from "./routes/swagger.js";
+import customerRoutes from "./routes/happyCustomer.routes.js";
+import dishRoutes from "./routes/dishRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
@@ -29,7 +32,9 @@ app.use("/uploads", express.static("uploads"));
 app.use("/users", userRoutes);
 app.use("/team", teamRoutes);
 app.use("/blogs", blogRoutes);
-
+app.use("/customers", customerRoutes);
+app.use("/api/dishes", dishRoutes);
+app.use("/api/auth", authRoutes);
 // ===================== SWAGGER =====================
 swaggerDocs(app);
 
